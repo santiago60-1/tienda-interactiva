@@ -1,0 +1,138 @@
+/* ========== Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e1eaff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ========== Contenedor Login ========== */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== Título ========== */
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2b4eff;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== Formulario ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #444;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #2b4eff;
+  outline: none;
+}
+
+/* ========== Botón ========== */
+.btn-login {
+  padding: 0.9rem;
+  background-color: #2b4eff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: #1a38c0;
+  transform: scale(1.03);
+}
+
+/* ========== Mensaje de error ========== */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  min-height: 1rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .login-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.2rem;
+  }
+
+  .btn-login {
+    font-size: 0.95rem;
+  }
+
+  input {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .login-title {
+    font-size: 2.2rem;
+  }
+
+  .btn-login {
+    font-size: 1.1rem;
+  }
+}

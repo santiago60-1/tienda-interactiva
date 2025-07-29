@@ -1,0 +1,215 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9ff;
+  color: #333;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background-color: #2b4eff;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideDown 0.5s ease forwards;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+}
+
+.btn-volver {
+  background: #fff;
+  color: #2b4eff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #e3e9ff;
+  transform: scale(1.05);
+}
+
+/* ===== MAIN CONTAINER ===== */
+.reportes-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ===== RESUMEN GENERAL ===== */
+.resumen h2 {
+  color: #2b4eff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.reporte-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.3rem 1.6rem;
+  box-shadow: 0 4px 12px rgba(43, 78, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  text-align: center;
+}
+
+.reporte-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(43, 78, 255, 0.3);
+}
+
+.reporte-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  user-select: none;
+}
+
+.reporte-box p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* ===== TOTALES AGRUPADOS ===== */
+.totales h2 {
+  color: #2b4eff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tabla-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 15px rgba(43, 78, 255, 0.1);
+  overflow-x: auto;
+  max-height: 380px;
+}
+
+/* Tablas dinámicas */
+.tabla-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.tabla-container th, .tabla-container td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-container th {
+  background-color: #2b4eff;
+  color: white;
+  position: sticky;
+  top: 0;
+  user-select: none;
+}
+
+.tabla-container tr:hover {
+  background-color: #e3e9ff;
+  transition: background-color 0.25s ease;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets and small laptops */
+@media (max-width: 768px) {
+  .reportes-container {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  .reporte-box p {
+    font-size: 1.1rem;
+  }
+
+  .tabla-container {
+    max-height: 320px;
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.3rem;
+  }
+
+  .btn-volver {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .resumen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reporte-box {
+    padding: 1rem 1.2rem;
+  }
+
+  .reporte-box h3 {
+    font-size: 1rem;
+  }
+
+  .reporte-box p {
+    font-size: 1.1rem;
+  }
+
+  .totales h2 {
+    font-size: 1.2rem;
+  }
+
+  .tabla-container {
+    max-height: 280px;
+    padding: 1rem 1rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1080px) {
+  .reportes-container {
+    max-width: 1200px;
+    padding: 0 3rem;
+  }
+}

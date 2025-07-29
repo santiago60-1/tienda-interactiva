@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "234rf",
+      "user": "santiago",
+      "password": "123"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "123kk",
+      "fruta": "manzana",
+      "verdura": "aji"
+    },
+    {
+      "id": "1753748926311",
+      "nombre": "lacteos"
+    },
+    {
+      "id": "1753754051121",
+      "nombre": "sas"
+    }
+  ]
+}

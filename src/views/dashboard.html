@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../styles/dashboard.css" />
+  <script src="../backends/guardian.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <h1>Panel de Control</h1>
+    <button id="logout-btn" class="btn-logout">Cerrar sesión</button>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="card" onclick="location.href='movimientos.html'">
+      <h2>Movimientos</h2>
+      <p>Registrar y consultar compras/ventas</p>
+    </section>
+    
+    <section class="card" onclick="location.href='categorias.html'">
+      <h2>Categorías</h2>
+      <p>Gestionar categorías de productos</p>
+    </section>
+
+    <section class="card" onclick="location.href='reportes.html'">
+      <h2>Reportes</h2>
+      <p>Análisis de ventas y compras</p>
+    </section>
+  </main>
+
+  <script src="../backends/login.js"></script>
+</body>
+</html>

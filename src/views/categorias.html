@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categorías</title>
+  <link rel="stylesheet" href="../styles/categorias.css" />
+
+  <script src="../backends/guardian.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Gestión de Categorías</h1>
+    <button id="volver-dashboard" class="btn-volver" onclick="location.href='./dashboard.html'">Volver al Dashboard</button>
+  </header>
+
+  <main class="main-container">
+    <!-- Formulario -->
+    <section class="form-section">
+      <h2>Agregar Categoría</h2>
+      <form id="form-categoria">
+        <div class="form-group">
+          <label for="nombre-categoria">Nombre de la categoría</label>
+          <input type="text" id="nombre-categoria" name="nombre-categoria" required />
+        </div>
+        <button type="submit" class="btn-agregar">Guardar Cambios</button>
+      </form>
+    </section>
+
+    <!-- Lista -->
+    <section class="lista-section">
+      <h2>Categorías Registradas</h2>
+      <ul id="lista-categorias">
+        <!-- Las categorías se llenarán dinámicamente -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="../backends/categorias.js"></script>
+
+</body>
+</html>

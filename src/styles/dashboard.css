@@ -1,0 +1,137 @@
+/* ========== Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Body ========== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0ecff, #f7faff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+/* ========== Header ========== */
+.header {
+  background-color: #2b4eff;
+  color: white;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.btn-logout {
+  background-color: #ffffff;
+  color: #2b4eff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #e3e9ff;
+  transform: scale(1.05);
+}
+
+/* ========== Dashboard Cards ========== */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+  animation: fadeIn 0.5s ease;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #2b4eff;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ========== Animaciones ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== Media Queries ========== */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn-logout {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .card {
+    width: 300px;
+  }
+
+  .card h2 {
+    font-size: 1.6rem;
+  }
+}
